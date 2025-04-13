@@ -1,0 +1,100 @@
+[
+  {
+    "tipo": "desarrollador",
+    "pagoPorHora": 7000.0,
+    "especialidad": "Programador Backend",
+    "jerarquia": "Junior",
+    "nombreCompleto": "Oscar Gonzalo Araya",
+    "dni": "35912768",
+    "contrato": {
+      "tipo": "Por tiempo indefinido",
+      "obraSocial": "Swiss Medical",
+      "beneficioExtra": "Descuento en universidades"
+    }
+  },
+  {
+    "tipo": "desarrollador",
+    "pagoPorHora": 4000.0,
+    "especialidad": "Programador Frontend",
+    "jerarquia": "Trainee",
+    "nombreCompleto": "Juán Pérez",
+    "dni": "35912348",
+    "contrato": {
+      "tipo": "Por tiempo indefinido",
+      "obraSocial": "Swiss Medical",
+      "beneficioExtra": "Descuento en universidades"
+    }
+  },
+  {
+    "tipo": "desarrollador",
+    "pagoPorHora": 6000.0,
+    "especialidad": "DevOps",
+    "jerarquia": "Senior",
+    "nombreCompleto": "Alvaringuis Rojas",
+    "dni": "23547689",
+    "contrato": {
+      "tipo": "Por tiempo indefinido",
+      "obraSocial": "Swiss Medical",
+      "beneficioExtra": "Descuento en universidades"
+    }
+  },
+  {
+    "tipo": "diseñador",
+    "pagoDelProyecto": 90000.0,
+    "nombreCompleto": "Pancho Villa",
+    "dni": "2345678",
+    "contrato": {
+      "tipo": "Por proyecto",
+      "obraSocial": "No aplica",
+      "beneficioExtra": "Bono extra"
+    }
+  },
+  {
+    "tipo": "diseñador",
+    "pagoDelProyecto": 60000.0,
+    "nombreCompleto": "María Juana Rama",
+    "dni": "34552378",
+    "contrato": {
+      "tipo": "Por proyecto",
+      "obraSocial": "No aplica",
+      "beneficioExtra": "Bono extra"
+    }
+  },
+  {
+    "tipo": "Tester",
+    "pagoFijoMensual": 800000.0,
+    "cantidadDeBugEncontrados": 10,
+    "nombreCompleto": "Roman Duarte",
+    "dni": "43568790",
+    "contrato": {
+      "tipo": "Por tiempo indefinido",
+      "obraSocial": "Swiss Medical",
+      "beneficioExtra": "Descuento en universidades"
+    }
+  },
+  {
+    "tipo": "Tester",
+    "pagoFijoMensual": 750000.0,
+    "cantidadDeBugEncontrados": 50,
+    "nombreCompleto": "Hector Rubiano",
+    "dni": "87658903",
+    "contrato": {
+      "tipo": "Por tiempo indefinido",
+      "obraSocial": "Swiss Medical",
+      "beneficioExtra": "Descuento en universidades"
+    }
+  },
+  {
+    "tipo": "desarrollador",
+    "pagoPorHora": 3500.0,
+    "especialidad": "Programador Frontend",
+    "jerarquia": "Trainee",
+    "nombreCompleto": "Valen",
+    "dni": "53040279",
+    "contrato": {
+      "tipo": "indefinido",
+      "obraSocial": "Osde",
+      "beneficioExtra": "descuento en gimnasio"
+    }
+  }
+]
