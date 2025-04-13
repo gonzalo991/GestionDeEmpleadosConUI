@@ -10,6 +10,8 @@ import java.io.PrintStream;
 public class EmpresaUI extends JFrame {
     private Empresa empresa;
     private JTextArea outputArea;
+    Contrato contratoIt = new Contrato("Contrato IT", "Swiss Medical", "Descuentos en universidades");
+    Contrato contratoRegular = new Contrato("Contrato Regular", "OSDE", "Sin beneficios extra");
 
     public EmpresaUI() {
         empresa = new Empresa("Tech Solutions");
@@ -52,6 +54,8 @@ public class EmpresaUI extends JFrame {
 
     private void mostrarFormularioAgregar() {
         String[] opciones = {"Desarrollador", "Diseñador", "Tester"};
+        String [] opcionesContrato = {"Contrato IT", "Contrato Regular"};
+
         String tipo = (String) JOptionPane.showInputDialog(this, "Tipo de empleado:", "Agregar",
                 JOptionPane.PLAIN_MESSAGE, null, opciones, "Desarrollador");
 
@@ -59,30 +63,38 @@ public class EmpresaUI extends JFrame {
 
         String nombre = JOptionPane.showInputDialog("Nombre completo:");
         String dni = JOptionPane.showInputDialog("DNI:");
-        String contratoTipo = JOptionPane.showInputDialog("Tipo de contrato:");
-        String obraSocial = JOptionPane.showInputDialog("Obra social:");
-        String beneficio = JOptionPane.showInputDialog("Beneficio extra:");
-        Contrato contrato = new Contrato(contratoTipo, obraSocial, beneficio);
 
         switch (tipo) {
             case "Desarrollador" -> {
+                var desarrollador = new Desarrollador(nombre, dni,contratoIt);
                 float pagoPorHora = Float.parseFloat(JOptionPane.showInputDialog("Pago por hora:"));
                 String especialidad = JOptionPane.showInputDialog("Especialidad:");
                 String jerarquia = JOptionPane.showInputDialog("Jerarquía:");
-                empresa.agregarEmpleado(new Desarrollador(nombre, dni, contrato, pagoPorHora, especialidad, jerarquia));
+
+                desarrollador.setPagoPorHora(pagoPorHora);
+                desarrollador.setEspecialidad(especialidad);
+                desarrollador.setJerarquia(jerarquia);
+                empresa.agregarEmpleado(desarrollador);
             }
             case "Diseñador" -> {
+                var diseñador = new Diseñador(nombre, dni, contratoRegular);
                 float pagoProyecto = Float.parseFloat(JOptionPane.showInputDialog("Pago por proyecto:"));
-                empresa.agregarEmpleado(new Diseñador(nombre, dni, contrato, pagoProyecto));
+
+                diseñador.setPagoDelProyecto(pagoProyecto);
+                empresa.agregarEmpleado(diseñador);
             }
             case "Tester" -> {
+                var tester = new Tester(nombre, dni, contratoIt);
                 float pagoMensual = Float.parseFloat(JOptionPane.showInputDialog("Pago mensual:"));
                 int bugs = Integer.parseInt(JOptionPane.showInputDialog("Cantidad de bugs encontrados:"));
-                empresa.agregarEmpleado(new Tester(nombre, dni, contrato, pagoMensual, bugs));
+
+                tester.setPagoFijoMensual(pagoMensual);
+                tester.setCantidadDeBugEncontrados(bugs);
+                empresa.agregarEmpleado(tester);
             }
         }
 
-        outputArea.setText("Empleado agregado correctamente.");
+        outputArea.setText("\nEmpleado agregado correctamente.");
     }
 
     private void listarEmpleados() {

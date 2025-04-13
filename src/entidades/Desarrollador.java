@@ -15,6 +15,10 @@ public class Desarrollador extends Empleado implements IEmpleado {
         this.jerarquia = jerarquia;
     }
 
+    public Desarrollador(String nombreCompleto, String dni, Contrato contrato) {
+        super(nombreCompleto, dni, contrato);
+    }
+
     @Override
     public void imprimirPago() {
         float sueldoTotal = calcularSueldo();
@@ -50,5 +54,29 @@ public class Desarrollador extends Empleado implements IEmpleado {
         float bono = sueldoBase * 0.2f;
         float descuentos = sueldoBase * 0.16f;
         return sueldoBase+bono-descuentos;
+    }
+
+    public float getPagoPorHora() {
+        return pagoPorHora;
+    }
+
+    public void setPagoPorHora(float pagoPorHora) {
+        this.pagoPorHora = pagoPorHora;
+    }
+
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
+    }
+
+    public String getJerarquia() {
+        return jerarquia;
+    }
+
+    public void setJerarquia(String jerarquia) {
+        this.jerarquia = jerarquia;
     }
 }

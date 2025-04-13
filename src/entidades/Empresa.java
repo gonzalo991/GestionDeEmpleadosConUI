@@ -29,6 +29,7 @@ public class Empresa implements IEmpresa {
 
     @Override
     public void imprimirDetallesDeEmpleados() {
+        this.empleados = EmpleadoSerializer.cargarEmpleados();
         Map<String,Long> conteo = empleados.stream()
                         .collect(Collectors.groupingBy(
                                 e->{

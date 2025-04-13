@@ -96,5 +96,29 @@
       "obraSocial": "Osde",
       "beneficioExtra": "descuento en gimnasio"
     }
+  },
+  {
+    "tipo": "diseñador",
+    "pagoDelProyecto": 870000.0,
+    "nombreCompleto": "Armando Paredes",
+    "dni": "34257680",
+    "contrato": {
+      "tipo": "Contrato Regular",
+      "obraSocial": "OSDE",
+      "beneficioExtra": "Sin beneficios extra"
+    }
+  },
+  {
+    "tipo": "desarrollador",
+    "pagoPorHora": 5400.0,
+    "especialidad": "Programador Fullstack",
+    "jerarquia": "Junior",
+    "nombreCompleto": "Elsa Pato",
+    "dni": "87983245",
+    "contrato": {
+      "tipo": "Contrato IT",
+      "obraSocial": "Swiss Medical",
+      "beneficioExtra": "Descuentos en universidades"
+    }
   }
 ]

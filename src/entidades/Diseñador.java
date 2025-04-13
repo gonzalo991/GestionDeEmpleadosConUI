@@ -10,6 +10,10 @@ public class Diseñador extends Empleado implements IEmpleado {
         this.pagoDelProyecto = pagoDelProyecto;
     }
 
+    public Diseñador(String nombreCompleto, String dni, Contrato contrato) {
+        super(nombreCompleto, dni, contrato);
+    }
+
     @Override
     public float calcularSueldo() {
         return (this.pagoDelProyecto * 0.2f) + pagoDelProyecto;
@@ -39,5 +43,13 @@ public class Diseñador extends Empleado implements IEmpleado {
                 """, this.nombreCompleto, this.dni,
                 this.contrato.getTipo(), this.contrato.getObraSocial(),
                 this.contrato.getBeneficioExtra());
+    }
+
+    public float getPagoDelProyecto() {
+        return pagoDelProyecto;
+    }
+
+    public void setPagoDelProyecto(float pagoDelProyecto) {
+        this.pagoDelProyecto = pagoDelProyecto;
     }
 }

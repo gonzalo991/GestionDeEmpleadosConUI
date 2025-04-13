@@ -13,6 +13,10 @@ public class Tester extends Empleado implements IEmpleado {
         this.cantidadDeBugEncontrados = cantidadDeBugEncontrados;
     }
 
+    public Tester(String nombreCompleto, String dni, Contrato contrato) {
+        super(nombreCompleto, dni, contrato);
+    }
+
     @Override
     public float calcularSueldo() {
         return (this.cantidadDeBugEncontrados*1000)+this.pagoFijoMensual;
@@ -45,5 +49,21 @@ public class Tester extends Empleado implements IEmpleado {
                 """, this.nombreCompleto, this.dni,
                 this.contrato.getTipo(), this.contrato.getObraSocial(),
                 this.contrato.getBeneficioExtra(), this.cantidadDeBugEncontrados);
+    }
+
+    public float getPagoFijoMensual() {
+        return pagoFijoMensual;
+    }
+
+    public void setPagoFijoMensual(float pagoFijoMensual) {
+        this.pagoFijoMensual = pagoFijoMensual;
+    }
+
+    public int getCantidadDeBugEncontrados() {
+        return cantidadDeBugEncontrados;
+    }
+
+    public void setCantidadDeBugEncontrados(int cantidadDeBugEncontrados) {
+        this.cantidadDeBugEncontrados = cantidadDeBugEncontrados;
     }
 }
